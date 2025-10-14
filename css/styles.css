@@ -1,0 +1,320 @@
+:root {
+    --margin: 60px;
+    --gap: 15px;
+    --m-border: #FF0000;
+    --n-columns: 6;
+    --n-gaps: calc(var(--n-columns) - 1);
+}
+
+@font-face {
+    font-family: 'TT Interphases Pro Mono';
+    src: url('../fonts/TT Interphases Pro Mono Trial Var Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body,
+input,
+textarea {
+    font-family: 'TT Interphases Pro Mono', monospace;
+    font-size: 1em;
+}
+
+body {
+    position: relative;
+    padding: var(--margin);
+    margin: 0;
+    min-height: calc(100vh - var(--margin) * 2);
+    width: fit-content;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+input, textarea {
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: default;
+    margin-bottom: 2rem;
+}
+
+.mode-panoram header {
+    position: sticky;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+    padding: 0;
+    margin: 0;
+}
+
+nav ul.list {
+    flex-direction: column;
+    gap: 0;
+}
+
+#visualization .option.active {
+    display: none;
+}
+
+#search,
+#search:hover input,
+#search:hover .item-list,
+#search input:focus,
+#search input:focus+.item-list,
+#search input:focus+.span-extend .item-list {
+    --n-cols: 2;
+}
+
+#search .container {
+    position: relative;
+    width: fit-content;
+}
+
+#search input,
+#search .item-list {
+    --n-cols: 1;
+}
+
+#search input {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    transition: all .5s ease;
+}
+
+#search .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#search .item-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+#search:hover .item-list,
+#search input:focus+.span-extend .item-list {
+    max-height: 200vh;
+}
+
+#search .item-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .2rem .2rem;
+    align-items: center;
+    transition: all .2s ease;
+    opacity: .5;
+}
+
+#search .item-type:first-of-type {
+    padding-top: .5rem;
+}
+
+#search .item-type.active,
+#search .item-type:hover {
+    opacity: 1;
+}
+
+#search .item-type .type {
+    padding: .2rem 0.5rem;
+    border-radius: .5rem;
+}
+
+#search .span-extend {
+    --n-cols: 1;
+    transition: width .5s ease;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+#search:hover .span-extend,
+#search input+.span-extend {
+    --n-cols: 2;
+}
+
+#search .container {
+    --n-cols: 1;
+}
+
+#search .container {
+    --n-cols: 2;
+}
+
+/* CONTENT */
+
+#container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+    width: fit-content;
+}
+
+img.cover {
+    width: 100%;
+}
+
+/* Columns */
+[class*="col-"],
+.mode-list,
+.mode-catalog .group,
+body {
+    --n-gaps: calc(var(--n-columns) - 1);
+    --w: calc((100% - var(--gap) * var(--n-gaps)) / var(--n-columns));
+
+    --default-w: calc(((100vw - var(--margin) * 2) - var(--gap) * 5) / 6);
+}
+
+.span-1,
+.mode-catalog>*,
+.mode-list .group>*,
+nav ul li.item {
+    --n-cols: 1;
+    height: fit-content;
+}
+
+.span-2,
+.item.span-2 {
+    --n-cols: 2;
+}
+
+.span-3 {
+    --n-cols: 3;
+}
+
+.span-6,
+.mode-list>* {
+    --n-cols: 6;
+}
+
+.row-content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+    flex-wrap: wrap;
+}
+
+.h-double-gap {
+    display: flex;
+    row-gap: calc(var(--gap) * 2) !important;
+}
+
+.b-gap {
+    gap: 15vh;
+}
+
+.col-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+img {
+    max-width: calc(var(--default-w) * var(--n-cols) + var(--gap) * (var(--n-cols) - 1));
+}
+
+img.fill {
+    width: 100%;
+}
+
+[class*="span-"],
+.mode-catalog .group,
+.mode-list .group,
+.mode-list .group>*,
+nav ul li.item,
+#search input,
+#search .item-list,
+#default-grid .item {
+    width: calc(var(--default-w) * var(--n-cols) + var(--gap) * (var(--n-cols) - 1));
+}
+
+.mode-list {
+    --n-columns: 6 !important;
+}
+
+.mode-list #container {
+    flex-direction: column;
+}
+
+.mode-catalog #container {
+    transition: none !important;
+}
+
+.mode-catalog .group {
+    --n-cols: 1;
+}
+
+body:not(.mode-catalog) .grid-columns .item:nth-child(n+7) {
+    display: none;
+}
+
+.mode-list .group {
+    --n-cols: 6;
+}
+
+.mode-list .group {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+}
+
+.mode-list .group .cover {
+    display: none;
+}
+
+.mode-catalog .group .t-hide {
+    display: none;
+}
+
+.mode-catalog .group .title {
+    margin-bottom: 1rem;
+}
+
+.mode-panoram .group :not(.cover) {
+    display: none;
+}
+
+.mode-panoram main {
+    width: calc(100vw - var(--margin) * 2);
+    height: calc(100vh - var(--margin) * 2);
+    overflow: hidden;
+}
+
+.mode-panoram #container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0;
+    width: 110vw;
+}
+
+.mode-panoram #container .group .cover {
+    height: calc(100vh / 4);
+    max-height: 50vh;
+}

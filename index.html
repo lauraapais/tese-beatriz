@@ -3,207 +3,1010 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arquivo">
     <title>Arquivo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/colours.css">
 </head>
 
-<body class="grid">
-    <div class="grid grid-background">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
-    <div class="color-palette-left">
-        <div class="color-palette-item color-palette-1"></div>
-        <div class="color-palette-item color-palette-2"></div>
-        <div class="color-palette-item color-palette-3"></div>
-        <div class="color-palette-item color-palette-4"></div>
-        <div class="color-palette-item color-palette-5"></div>
-        <div class="color-palette-item color-palette-6"></div>
-        <div class="color-palette-item color-palette-7"></div>
-        <div class="color-palette-item color-palette-8"></div>
-        <div class="color-palette-item color-palette-9"></div>
-        <div class="color-palette-item color-palette-10"></div>
-        <div class="color-palette-item color-palette-11"></div>
-        <div class="color-palette-item color-palette-12"></div>
-    </div>
-
-    <div class="color-palette-right">
-        <div class="color-palette-item color-palette-1"></div>
-        <div class="color-palette-item color-palette-2"></div>
-        <div class="color-palette-item color-palette-3"></div>
-        <div class="color-palette-item color-palette-4"></div>
-        <div class="color-palette-item color-palette-5"></div>
-        <div class="color-palette-item color-palette-6"></div>
-        <div class="color-palette-item color-palette-7"></div>
-        <div class="color-palette-item color-palette-8"></div>
-        <div class="color-palette-item color-palette-9"></div>
-        <div class="color-palette-item color-palette-10"></div>
-        <div class="color-palette-item color-palette-11"></div>
-        <div class="color-palette-item color-palette-12"></div>
-    </div>
-
-    <!-- Header -->
-  <!-- Header -->
-    <header class="grid">
-        <div class="header-col1">
-            <a href="index.html">
-                <p>homepage</p>
-            </a>
-            <a href="sobre.html">
-                <p>sobre o projeto</p>
-            </a>
-        </div>
-
-        <div class="header-col2">
-            <p>en</p>
-            <p>/</p>
-            <p>pt</p>
-        </div>
-
-        <div class="header-col3 header-search">
-            <p>pesquisar</p>
-        </div>
-
-        <div class="header-col5">
-            <p>escuro</p>
-        </div>
-
-        <div class="header-col6">
-            <p>catálogo</p>
-            <p>lista</p>
-            <p>panorama</p>
-        </div>
-    </header>
+<body class="colour-01 mode-panoram">
 
     <main>
-        <!--panorama/catalogo/lista-->
-        <div class="book-container catalogo">
-
-            <div class="book-container-out grid">
-            <div class="book-year">
-                <p>1900</p>
+        <header>
+            <nav>
+                <ul>
+                    <li class="item"><a href="about.html">sobre o projeto</a></li>
+                    <li class="item empty"></li>
+                    <li class="item" id="search">
+                        <div class="container">
+                            <input name="content" type="text" placeholder="pesquisar">
+                            <div class="span-extend">
+                                <div class="item-list">
+                                    <div class="item-type active">
+                                        <span class="type">nome</span>
+                                        <span class="description">nome da obra</span>
+                                    </div>
+                                    <div class="item-type">
+                                        <span class="type">ano</span>
+                                        <span class="description">ano da obra</span>
+                                    </div>
+                                    <div class="item-type">
+                                        <span class="type">autor</span>
+                                        <span class="description">autor da obra</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e3e3e3">
+                                    <path
+                                        d="M779.38-153.85 528.92-404.31q-30 25.54-69 39.54t-78.38 14q-96.1 0-162.67-66.53-66.56-66.53-66.56-162.57 0-96.05 66.53-162.71 66.53-66.65 162.57-66.65 96.05 0 162.71 66.56Q610.77-676.1 610.77-580q0 41.69-14.77 80.69t-38.77 66.69l250.46 250.47-28.31 28.3ZM381.54-390.77q79.61 0 134.42-54.81 54.81-54.8 54.81-134.42 0-79.62-54.81-134.42-54.81-54.81-134.42-54.81-79.62 0-134.42 54.81-54.81 54.8-54.81 134.42 0 79.62 54.81 134.42 54.8 54.81 134.42 54.81Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <span>pt</span><span>/</span><span>en</span>
+                    </li>
+                    <li class="item">
+                        <ul id="visualization" class="list">
+                            <li class="option" data-type="list">lista</li>
+                            <li class="option" data-type="catalog">catálogo</li>
+                            <li class="option active" data-type="panoram">panorama</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="container">
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1965</span>
+                </div>
+                <div class="title">
+                    <span>Kama Sutra</span>
+                </div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/1.jpeg">
             </div>
-
-            <div class="book-container-inner">
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">A Vénus de Kazabaϊka </p>
-                    <img class="book-cover" src="assets/data/1.jpeg">
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1966</span>
                 </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/2.jpg">
+                <div class="title">
+                    <span>Antologia de Poesia Portuguesa Erótica e Satírica</span>
                 </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/3.jpg">
+                <div class="t-hide">
+                    <span>Antologia de Poesia Portutguesa Erótica e Satírica (Tiragem Especial)</span>
                 </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/4.jpeg">
+                <div class="t-hide">
+                    <span>A Filosofia na Alcova</span>
                 </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/5.png">
+                <div class="t-hide">
+                    <span>A Vénus de Kazabaϊka</span>
                 </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/6.jpg">
+                <div class="t-hide">
+                    <span>Jonas ou o Amor Numa Baleia</span>
                 </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/7.jpg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/8.JPG">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/9.jpg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/11.jpg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/12.jpeg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/13.png">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/14.jpeg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/15.jpg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/16.jpg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/17.jpg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/18.jpg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/19.jpeg">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/20.JPG">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/21.JPG">
-                </div>
-                <!--1-->
-                <div class="book-item">
-                    <p class="book-title">Antologia de Poesia Portuguesa Erótica e Satírica</p>
-                    <img class="book-cover" src="assets/data/22.jpg">
-                </div>
+                <img class="cover" src="assets/2.jpg">
             </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide"></div>
+                <div class="title">O Vinho e a Lira</div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/3.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1967</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Conto Fantástico Português (1ª edição)</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Vanguarda</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/4.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1968</span>
+                </div>
+                <div class="title">
+                    <span>Afinal o Castelo Era Verdade</span>
+                </div>
+                <div class="t-hide">
+                    <span>Os Quatro Corações do Coração</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/5.png">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1969</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Humor Português</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia do Conto Abominável</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias Com Juízo</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/6.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1970</span>
+                </div>
+                <div class="title">
+                    <span>Arte de Furtar</span>
+                </div>
+                <div class="t-hide">
+                    <span>Insofrimento In Sofrimento</span>
+                </div>
+                <div class="t-hide">
+                    <span>Giroflé Giroflá</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias de Bichos em África</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/7.jpg">
+            </div>
+            <!-- REPEAT -->
+
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1965</span>
+                </div>
+                <div class="title">
+                    <span>Kama Sutra</span>
+                </div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/1.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1966</span>
+                </div>
+                <div class="title">
+                    <span>Antologia de Poesia Portuguesa Erótica e Satírica</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Poesia Portutguesa Erótica e Satírica (Tiragem Especial)</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Filosofia na Alcova</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Vénus de Kazabaϊka</span>
+                </div>
+                <div class="t-hide">
+                    <span>Jonas ou o Amor Numa Baleia</span>
+                </div>
+                <img class="cover" src="assets/2.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide"></div>
+                <div class="title">O Vinho e a Lira</div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/3.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1967</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Conto Fantástico Português (1ª edição)</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Vanguarda</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/4.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1968</span>
+                </div>
+                <div class="title">
+                    <span>Afinal o Castelo Era Verdade</span>
+                </div>
+                <div class="t-hide">
+                    <span>Os Quatro Corações do Coração</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/5.png">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1969</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Humor Português</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia do Conto Abominável</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias Com Juízo</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/6.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1970</span>
+                </div>
+                <div class="title">
+                    <span>Arte de Furtar</span>
+                </div>
+                <div class="t-hide">
+                    <span>Insofrimento In Sofrimento</span>
+                </div>
+                <div class="t-hide">
+                    <span>Giroflé Giroflá</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias de Bichos em África</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/7.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1965</span>
+                </div>
+                <div class="title">
+                    <span>Kama Sutra</span>
+                </div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/1.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1966</span>
+                </div>
+                <div class="title">
+                    <span>Antologia de Poesia Portuguesa Erótica e Satírica</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Poesia Portutguesa Erótica e Satírica (Tiragem Especial)</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Filosofia na Alcova</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Vénus de Kazabaϊka</span>
+                </div>
+                <div class="t-hide">
+                    <span>Jonas ou o Amor Numa Baleia</span>
+                </div>
+                <img class="cover" src="assets/2.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide"></div>
+                <div class="title">O Vinho e a Lira</div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/3.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1967</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Conto Fantástico Português (1ª edição)</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Vanguarda</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/4.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1968</span>
+                </div>
+                <div class="title">
+                    <span>Afinal o Castelo Era Verdade</span>
+                </div>
+                <div class="t-hide">
+                    <span>Os Quatro Corações do Coração</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/5.png">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1969</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Humor Português</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia do Conto Abominável</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias Com Juízo</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/6.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1970</span>
+                </div>
+                <div class="title">
+                    <span>Arte de Furtar</span>
+                </div>
+                <div class="t-hide">
+                    <span>Insofrimento In Sofrimento</span>
+                </div>
+                <div class="t-hide">
+                    <span>Giroflé Giroflá</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias de Bichos em África</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/7.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1965</span>
+                </div>
+                <div class="title">
+                    <span>Kama Sutra</span>
+                </div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/1.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1966</span>
+                </div>
+                <div class="title">
+                    <span>Antologia de Poesia Portuguesa Erótica e Satírica</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Poesia Portutguesa Erótica e Satírica (Tiragem Especial)</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Filosofia na Alcova</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Vénus de Kazabaϊka</span>
+                </div>
+                <div class="t-hide">
+                    <span>Jonas ou o Amor Numa Baleia</span>
+                </div>
+                <img class="cover" src="assets/2.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide"></div>
+                <div class="title">O Vinho e a Lira</div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/3.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1967</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Conto Fantástico Português (1ª edição)</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Vanguarda</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/4.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1968</span>
+                </div>
+                <div class="title">
+                    <span>Afinal o Castelo Era Verdade</span>
+                </div>
+                <div class="t-hide">
+                    <span>Os Quatro Corações do Coração</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/5.png">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1969</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Humor Português</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia do Conto Abominável</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias Com Juízo</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/6.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1970</span>
+                </div>
+                <div class="title">
+                    <span>Arte de Furtar</span>
+                </div>
+                <div class="t-hide">
+                    <span>Insofrimento In Sofrimento</span>
+                </div>
+                <div class="t-hide">
+                    <span>Giroflé Giroflá</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias de Bichos em África</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/7.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1965</span>
+                </div>
+                <div class="title">
+                    <span>Kama Sutra</span>
+                </div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/1.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1966</span>
+                </div>
+                <div class="title">
+                    <span>Antologia de Poesia Portuguesa Erótica e Satírica</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Poesia Portutguesa Erótica e Satírica (Tiragem Especial)</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Filosofia na Alcova</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Vénus de Kazabaϊka</span>
+                </div>
+                <div class="t-hide">
+                    <span>Jonas ou o Amor Numa Baleia</span>
+                </div>
+                <img class="cover" src="assets/2.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide"></div>
+                <div class="title">O Vinho e a Lira</div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/3.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1967</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Conto Fantástico Português (1ª edição)</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Vanguarda</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/4.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1968</span>
+                </div>
+                <div class="title">
+                    <span>Afinal o Castelo Era Verdade</span>
+                </div>
+                <div class="t-hide">
+                    <span>Os Quatro Corações do Coração</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/5.png">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1969</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Humor Português</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia do Conto Abominável</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias Com Juízo</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/6.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1970</span>
+                </div>
+                <div class="title">
+                    <span>Arte de Furtar</span>
+                </div>
+                <div class="t-hide">
+                    <span>Insofrimento In Sofrimento</span>
+                </div>
+                <div class="t-hide">
+                    <span>Giroflé Giroflá</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias de Bichos em África</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/7.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1965</span>
+                </div>
+                <div class="title">
+                    <span>Kama Sutra</span>
+                </div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/1.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1966</span>
+                </div>
+                <div class="title">
+                    <span>Antologia de Poesia Portuguesa Erótica e Satírica</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Poesia Portutguesa Erótica e Satírica (Tiragem Especial)</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Filosofia na Alcova</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Vénus de Kazabaϊka</span>
+                </div>
+                <div class="t-hide">
+                    <span>Jonas ou o Amor Numa Baleia</span>
+                </div>
+                <img class="cover" src="assets/2.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide"></div>
+                <div class="title">O Vinho e a Lira</div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/3.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1967</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Conto Fantástico Português (1ª edição)</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Vanguarda</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/4.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1968</span>
+                </div>
+                <div class="title">
+                    <span>Afinal o Castelo Era Verdade</span>
+                </div>
+                <div class="t-hide">
+                    <span>Os Quatro Corações do Coração</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/5.png">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1969</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Humor Português</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia do Conto Abominável</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias Com Juízo</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/6.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1970</span>
+                </div>
+                <div class="title">
+                    <span>Arte de Furtar</span>
+                </div>
+                <div class="t-hide">
+                    <span>Insofrimento In Sofrimento</span>
+                </div>
+                <div class="t-hide">
+                    <span>Giroflé Giroflá</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias de Bichos em África</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/7.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1965</span>
+                </div>
+                <div class="title">
+                    <span>Kama Sutra</span>
+                </div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/1.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1966</span>
+                </div>
+                <div class="title">
+                    <span>Antologia de Poesia Portuguesa Erótica e Satírica</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Poesia Portutguesa Erótica e Satírica (Tiragem Especial)</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Filosofia na Alcova</span>
+                </div>
+                <div class="t-hide">
+                    <span>A Vénus de Kazabaϊka</span>
+                </div>
+                <div class="t-hide">
+                    <span>Jonas ou o Amor Numa Baleia</span>
+                </div>
+                <img class="cover" src="assets/2.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide"></div>
+                <div class="title">O Vinho e a Lira</div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <div class="t-hide"></div>
+                <img class="cover" src="assets/3.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1967</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Conto Fantástico Português (1ª edição)</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia de Vanguarda</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/4.jpeg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1968</span>
+                </div>
+                <div class="title">
+                    <span>Afinal o Castelo Era Verdade</span>
+                </div>
+                <div class="t-hide">
+                    <span>Os Quatro Corações do Coração</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/5.png">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1969</span>
+                </div>
+                <div class="title">
+                    <span>Antologia do Humor Português</span>
+                </div>
+                <div class="t-hide">
+                    <span>Antologia do Conto Abominável</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias Com Juízo</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/6.jpg">
+            </div>
+            <div class="group" data-href="single.html">
+                <div class="t-hide">
+                    <span>1970</span>
+                </div>
+                <div class="title">
+                    <span>Arte de Furtar</span>
+                </div>
+                <div class="t-hide">
+                    <span>Insofrimento In Sofrimento</span>
+                </div>
+                <div class="t-hide">
+                    <span>Giroflé Giroflá</span>
+                </div>
+                <div class="t-hide">
+                    <span>Histórias de Bichos em África</span>
+                </div>
+                <div class="t-hide">
+                    <span></span>
+                </div>
+                <img class="cover" src="assets/7.jpg">
             </div>
         </div>
     </main>
 
+    <div id="default-grid">
+        <!-- Columns -->
+        <div class="grid-columns">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <!-- Corners -->
+        <div class="corner c-tl"></div>
+        <div class="corner c-tr"></div>
+        <div class="corner c-bl"></div>
+        <div class="corner c-br"></div>
+        <!-- Left Colour Swap -->
+        <div class="colour-swap cs-left">
+            <div class="colour-01" data-colour="colour-01"></div>
+            <div class="colour-02" data-colour="colour-02"></div>
+            <div class="colour-03" data-colour="colour-03"></div>
+            <div class="colour-04" data-colour="colour-04"></div>
+            <div class="colour-05" data-colour="colour-05"></div>
+            <div class="colour-06" data-colour="colour-06"></div>
+            <div class="colour-07" data-colour="colour-07"></div>
+            <div class="colour-08" data-colour="colour-08"></div>
+            <div class="colour-09" data-colour="colour-09"></div>
+            <div class="colour-10" data-colour="colour-10"></div>
+            <div class="colour-11" data-colour="colour-11"></div>
+            <div class="colour-12" data-colour="colour-12"></div>
+        </div>
+        <!-- Right Colour Swap -->
+        <div class="colour-swap cs-right">
+            <div class="colour-12" data-colour="colour-12"></div>
+            <div class="colour-11" data-colour="colour-11"></div>
+            <div class="colour-10" data-colour="colour-10"></div>
+            <div class="colour-09" data-colour="colour-09"></div>
+            <div class="colour-08" data-colour="colour-08"></div>
+            <div class="colour-07" data-colour="colour-07"></div>
+            <div class="colour-06" data-colour="colour-06"></div>
+            <div class="colour-05" data-colour="colour-05"></div>
+            <div class="colour-04" data-colour="colour-04"></div>
+            <div class="colour-03" data-colour="colour-03"></div>
+            <div class="colour-02" data-colour="colour-02"></div>
+            <div class="colour-01" data-colour="colour-01"></div>
+        </div>
+    </div>
 
-
+    <!-- Scripts -->
+    <script src="js/colour-swap.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

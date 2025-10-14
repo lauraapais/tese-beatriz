@@ -1,0 +1,103 @@
+:root {
+    --bg-01: #FFFFFF;
+    --bg-02: #F2F2F2;
+    --bg-03: #E6E6E6;
+    --bg-04: #CCCCCC;
+    --bg-05: #B3B3B3;
+    --bg-06: #999999;
+    --bg-07: #808080;
+    --bg-08: #666666;
+    --bg-09: #4D4D4D;
+    --bg-10: #333333;
+    --bg-11: #1A1A1A;
+    --bg-12: #000000;
+}
+
+.colour-01 {
+    background-color: var(--bg-01);
+}
+
+.colour-02 {
+    background-color: var(--bg-02);
+}
+
+.colour-03 {
+    background-color: var(--bg-03);
+}
+
+.colour-04 {
+    background-color: var(--bg-04);
+}
+
+.colour-05 {
+    background-color: var(--bg-05);
+}
+
+.colour-06 {
+    background-color: var(--bg-06);
+}
+
+.colour-07 {
+    background-color: var(--bg-07);
+}
+
+.colour-08 {
+    background-color: var(--bg-08);
+}
+
+.colour-09 {
+    background-color: var(--bg-09);
+}
+
+.colour-10 {
+    background-color: var(--bg-10);
+}
+
+.colour-11 {
+    background-color: var(--bg-11);
+}
+
+.colour-12 {
+    background-color: var(--bg-12);
+}
+
+
+/* REVERSE */
+.colour-01 header {
+    background-color: var(--bg-01);
+}
+
+.colour-01 header,
+.colour-01 p {
+    color: var(--bg-12);
+}
+
+.colour-01 input,
+.colour-01 textarea,
+.colour-01 input::placeholder,
+.colour-01 textarea::placeholder,
+.colour-01 #search .item-type .type,
+.colour-01 #search .item-list {
+    background-color: var(--bg-12);
+    color: var(--bg-01);
+}
+
+.colour-01 #search .item-type .type {
+    border: 1px solid var(--bg-01);
+    box-sizing: border-box;
+}
+
+.colour-01 #search .item-type {
+    background-color: var(--bg-12);
+    color: var(--bg-01);
+}
+
+.colour-12 header,
+.colour-12 p {
+    color: var(--bg-01);
+}
+
+.colour-01 .corner::before,
+.colour-01 .corner::after {
+    background-color: var(--bg-12);
+}

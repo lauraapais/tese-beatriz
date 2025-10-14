@@ -1,0 +1,135 @@
+/* GRID */
+
+#default-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--margin) * 2);
+    height: calc(100% - var(--margin) * 2);
+    margin: var(--margin);
+    pointer-events: none;
+    z-index: 2;
+}
+
+#default-grid .grid-columns {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: var(--gap);
+}
+
+#default-grid .item {
+    border: 1px solid var(--m-border);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* CORNERS */
+
+.corner {
+    position: absolute;
+    width: var(--margin);
+    aspect-ratio: 1;
+    mix-blend-mode: difference;
+    --line-width: 30px;
+    --line-height: 1px;
+    --offset: 25%;
+}
+
+.corner::before,
+.corner::after {
+    content: '';
+    position: absolute;
+}
+
+.corner::after {
+    width: var(--line-width);
+    height: var(--line-height);
+}
+
+.corner::before {
+    width: var(--line-height);
+    height: var(--line-width);
+}
+
+.c-tl {
+    top: calc(var(--margin) * -1);
+    left: calc(var(--margin) * -1);
+}
+
+.c-tl::after {
+    bottom: 0;
+    left: var(--offset);
+}
+
+.c-tl::before {
+    bottom: var(--offset);
+    right: 0;
+}
+
+.c-tr {
+    top: calc(var(--margin) * -1);
+    right: calc(var(--margin) * -1);
+}
+
+.c-tr::after {
+    bottom: 0;
+    right: var(--offset);
+}
+
+.c-tr::before {
+    bottom: var(--offset);
+    left: 0;
+}
+
+.c-bl {
+    bottom: calc(var(--margin) * -1);
+    left: calc(var(--margin) * -1);
+}
+
+.c-bl::after {
+    top: 0;
+    left: var(--offset);
+}
+
+.c-bl::before {
+    top: var(--offset);
+    right: 0;
+}
+
+.c-br {
+    bottom: calc(var(--margin) * -1);
+    right: calc(var(--margin) * -1);
+}
+
+.c-br::after {
+    top: 0;
+    right: var(--offset);
+}
+
+.c-br::before {
+    top: var(--offset);
+    left: 0;
+}
+
+/* COLOUR SWAP */
+
+.colour-swap {
+    position: absolute;
+    top: var(--margin);
+    width: calc(var(--margin) / 2);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.colour-swap.cs-left {
+    left: calc(var(--margin) * -0.75);
+}
+.colour-swap.cs-right {
+    right: calc(var(--margin) * -0.75);
+}
+
+.colour-swap div {
+    width: 100%;
+    aspect-ratio: 1;
+}
