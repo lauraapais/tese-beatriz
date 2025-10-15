@@ -26,6 +26,8 @@ function setupVisualizationOptions() {
             document.getElementById("container").style.removeProperty('width');
             this.classList.add('active');
             equalizeTitleHeights();
+
+            if(modeType == "panoram") adjustContainerWidthPrecise();
         });
     });
 }
