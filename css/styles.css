@@ -184,7 +184,7 @@ nav ul.list {
 }
 
 img.cover {
-    /*width: 100%;*/
+    width: auto;
 }
 
 /* Columns */
