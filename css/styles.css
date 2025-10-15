@@ -21,6 +21,11 @@ textarea {
     font-size: 1em;
 }
 
+textarea {
+    resize: vertical;
+    min-height: 3em;
+}
+
 body {
     position: relative;
     padding: var(--margin);
@@ -39,7 +44,8 @@ h1 {
     text-transform: uppercase;
 }
 
-input, textarea {
+input,
+textarea {
     border: 0;
     box-sizing: border-box;
 }
@@ -263,12 +269,18 @@ nav ul li.item,
     flex-direction: column;
 }
 
+.mode-list #container .group,
+.mode-catalog #container .group {
+    cursor: pointer;
+}
+
 .mode-catalog #container {
     transition: none !important;
 }
 
 .mode-catalog .group {
     --n-cols: 1;
+    height: fit-content;
 }
 
 body:not(.mode-catalog) .grid-columns .item:nth-child(n+7) {
@@ -315,6 +327,6 @@ body:not(.mode-catalog) .grid-columns .item:nth-child(n+7) {
 }
 
 .mode-panoram #container .group .cover {
-    height: calc(100vh / 4);
+    height: calc(100vh / 3);
     max-height: 50vh;
 }

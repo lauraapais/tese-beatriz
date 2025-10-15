@@ -13,91 +13,116 @@
     --bg-12: #000000;
 }
 
-.colour-01 {
-    background-color: var(--bg-01);
-}
-
-.colour-02 {
-    background-color: var(--bg-02);
-}
-
-.colour-03 {
-    background-color: var(--bg-03);
-}
-
-.colour-04 {
-    background-color: var(--bg-04);
-}
-
-.colour-05 {
-    background-color: var(--bg-05);
-}
-
-.colour-06 {
-    background-color: var(--bg-06);
-}
-
-.colour-07 {
-    background-color: var(--bg-07);
-}
-
-.colour-08 {
-    background-color: var(--bg-08);
-}
-
-.colour-09 {
-    background-color: var(--bg-09);
-}
-
-.colour-10 {
-    background-color: var(--bg-10);
-}
-
-.colour-11 {
-    background-color: var(--bg-11);
-}
-
-.colour-12 {
-    background-color: var(--bg-12);
-}
-
-
-/* REVERSE */
+.colour-01,
 .colour-01 header {
     background-color: var(--bg-01);
 }
 
-.colour-01 header,
-.colour-01 p {
+.colour-02,
+.colour-02 header {
+    background-color: var(--bg-02);
+}
+
+.colour-03,
+.colour-03 header {
+    background-color: var(--bg-03);
+}
+
+.colour-04,
+.colour-04 header {
+    background-color: var(--bg-04);
+}
+
+.colour-05,
+.colour-05 header {
+    background-color: var(--bg-05);
+}
+
+.colour-06,
+.colour-06 header {
+    background-color: var(--bg-06);
+}
+
+.colour-07,
+.colour-07 header {
+    background-color: var(--bg-07);
+}
+
+.colour-08,
+.colour-08 header {
+    background-color: var(--bg-08);
+}
+
+.colour-09,
+.colour-09 header {
+    background-color: var(--bg-09);
+}
+
+.colour-10,
+.colour-10 header {
+    background-color: var(--bg-10);
+}
+
+.colour-11,
+.colour-11 header {
+    background-color: var(--bg-11);
+}
+
+.colour-12,
+.colour-12 header {
+    background-color: var(--bg-12);
+}
+
+
+/* TEX COLOR */
+
+.f-half header,
+.f-half p,
+.f-half a {
     color: var(--bg-12);
 }
 
-.colour-01 input,
-.colour-01 textarea,
-.colour-01 input::placeholder,
-.colour-01 textarea::placeholder,
-.colour-01 #search .item-type .type,
-.colour-01 #search .item-list {
+.s-half header,
+.s-half p,
+.s-half a {
+    color: var(--bg-01);
+}
+
+/* INPUTS */
+.f-half input,
+.f-half textarea,
+.f-half input::placeholder,
+.f-half textarea::placeholder,
+.f-half #search .item-type .type,
+.f-half #search .item-list,
+.f-half #search .item-type,
+.f-half .corner::before,
+.f-half .corner::after {
     background-color: var(--bg-12);
     color: var(--bg-01);
 }
 
-.colour-01 #search .item-type .type {
+.s-half input,
+.s-half textarea,
+.s-half input::placeholder,
+.s-half textarea::placeholder,
+.s-half #search .item-type .type,
+.s-half #search .item-list,
+.s-half #search .item-type,
+.s-half .corner::before,
+.s-half .corner::after {
+    background-color: var(--bg-01);
+    color: var(--bg-12);
+}
+
+/* SEARCH CATEGORIES */
+
+.f-half #search .item-type .type {
     border: 1px solid var(--bg-01);
     box-sizing: border-box;
 }
 
-.colour-01 #search .item-type {
-    background-color: var(--bg-12);
-    color: var(--bg-01);
-}
-
-.colour-12 header,
-.colour-12 p {
-    color: var(--bg-01);
-}
-
-.colour-01 .corner::before,
-.colour-01 .corner::after {
-    background-color: var(--bg-12);
+.s-half #search .item-type .type {
+    border: 1px solid var(--bg-12);
+    box-sizing: border-box;
 }

@@ -127,9 +127,6 @@ async function adjustContainerWidthPrecise() {
     
     // Apply the calculated width
     container.style.width = `${targetWidth}px`;
-    
-    console.log(`Main aspect ratio: ${mainAspectRatio.toFixed(2)}:1`);
-    console.log(`Adjusted container to ${targetWidth.toFixed(0)}px width`);
 }
 // CLICK GROUPS URL
 // Keep track of your drag scroller instances
@@ -167,13 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // EVENTS
-document.addEventListener('DOMContentLoaded', async function(){
+window.addEventListener('load', async function(){
     createGridItems();
     setupVisualizationOptions();
     setupInputBlur();
     setupTypeOptions();
     equalizeTitleHeights();
-
     await adjustContainerWidthPrecise();
     simpleZoomOutThenIn();
 });
