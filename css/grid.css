@@ -30,8 +30,7 @@
     position: absolute;
     width: var(--margin);
     aspect-ratio: 1;
-    mix-blend-mode: difference;
-    --line-width: 30px;
+    --line-width: calc(var(--margin) / 2);
     --line-height: 1px;
     --offset: 25%;
 }

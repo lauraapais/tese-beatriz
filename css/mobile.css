@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    :root {
+        --margin: 30px;
+        --gap: 10px;
+        --n-columns: 3;
+    }
+
+    body:not(.mode-catalog) .grid-columns .item:nth-child(n+4) {
+        display: none;
+    }
+
+    nav ul li.item.empty {
+        display: none;
+    }
+}
