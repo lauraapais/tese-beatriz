@@ -32,7 +32,7 @@ function setupVisualizationOptions() {
     });
 }
 // ZOOM IN PANORAM
-function simpleZoomOutThenIn() {
+async function simpleZoomOutThenIn() {
     const main = document.querySelector('main');
     const container = document.getElementById('container');
 
@@ -158,13 +158,6 @@ function setupGroupClicks() {
     });
 }
 
-// Initialize your drag scrollers and store references
-document.addEventListener('DOMContentLoaded', function() {
-    dragScrollers.push(new UniversalDragScroller(document.body));
-    dragScrollers.push(new UniversalDragScroller(document.querySelector('main')));
-    setupGroupClicks();
-});
-
 // EVENTS
 window.addEventListener('load', async function(){
     createGridItems();
@@ -173,7 +166,11 @@ window.addEventListener('load', async function(){
     setupTypeOptions();
     equalizeTitleHeights();
     await adjustContainerWidthPrecise();
-    simpleZoomOutThenIn();
+    await simpleZoomOutThenIn();
+    
+    dragScrollers.push(new UniversalDragScroller(document.body));
+    dragScrollers.push(new UniversalDragScroller(document.querySelector('main')));
+    setupGroupClicks();
 });
 
 window.addEventListener('resize', function() {

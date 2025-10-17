@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function completeLoading() {
         progressBar.style.width = '100%';
         loadingScreen.style.opacity = '0';
-        console.log("HERE");
         
         setTimeout(() => {
             loadingScreen.style.display = 'none';
