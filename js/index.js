@@ -50,6 +50,7 @@ async function simpleZoomOutThenIn() {
         container.style.transition = 'transform 1.5s ease-out';
         container.style.transform = 'scale(1)';
     }, 1000);
+    loadZoomEvent = true;
 }
 // SEARCH OPTIONS
 function setupTypeOptions() {
@@ -177,3 +178,5 @@ window.addEventListener('resize', function() {
     adjustContainerWidthPrecise();
     equalizeTitleHeights();
 });
+
+let loadZoomEvent = false;

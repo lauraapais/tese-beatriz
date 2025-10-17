@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         progressBar.style.width = `${progressPercent}%`;
         
-        if (progressPercent === 100) {
+        if (progressPercent === 100 && loadZoomEvent) {
             completeLoading();
         }
     }

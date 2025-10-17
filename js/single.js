@@ -15,3 +15,5 @@ function equalizeHeights() {
 document.addEventListener('DOMContentLoaded', equalizeHeights);
 
 window.addEventListener('resize', equalizeHeights);
+
+let loadZoomEvent = false;
