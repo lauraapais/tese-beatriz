@@ -78,13 +78,17 @@
 
 .f-half header,
 .f-half p,
-.f-half a {
+.f-half a,
+.f-half span,
+.f-half h1 {
     color: var(--bg-12);
 }
 
 .s-half header,
 .s-half p,
-.s-half a {
+.s-half a,
+.s-half span,
+.s-half h1 {
     color: var(--bg-01);
 }
 
