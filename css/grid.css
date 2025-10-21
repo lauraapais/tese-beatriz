@@ -19,7 +19,7 @@
 }
 
 #default-grid .item {
-    border: 1px solid var(--m-border);
+    border: 1px solid var(--c-border);
     width: 100%;
     box-sizing: border-box;
 }

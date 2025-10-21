@@ -1,7 +1,6 @@
 :root {
     --margin: 60px;
     --gap: 15px;
-    --m-border: #FF0000;
     --n-columns: 6;
     --n-gaps: calc(var(--n-columns) - 1);
 }
