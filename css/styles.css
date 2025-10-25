@@ -18,6 +18,7 @@ input,
 textarea {
     font-family: 'TT Interphases Pro Mono', monospace;
     font-size: 1em;
+    line-height: 1rem;
 }
 
 textarea {
