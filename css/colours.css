@@ -89,21 +89,16 @@ h1 {
 }
 
 input,
+.search-content,
 textarea,
 input::placeholder,
 textarea::placeholder,
-#search .item-type .type,
 #search .item-list,
-#search .item-type,
+#search .item-type span,
 .corner::before,
 .corner::after {
     background-color: var(--c-text);
     color: var(--c-back);
-}
-
-#search .item-type .type {
-    border: 1px solid var(--c-back);
-    box-sizing: border-box;
 }
 
 .colour-swap [class*="colour-"] {
